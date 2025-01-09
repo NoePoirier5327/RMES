@@ -1,7 +1,7 @@
 # RMES
 Réseau Mondial des Ecoles Solidaires
 
-Il s'agit d'un projet d'échanges (culturels et éducatifs) entre-écoles.
+Il s'agit d'un projet d'échanges (culturels et éducatifs) entre écoles.
 
 Année scolaire, 2024-2025.
 
