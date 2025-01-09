@@ -20,4 +20,4 @@ Toute fonctionnalité doit être testée avant d'être mise en place sur la bran
 Au niveau du code, le code doit être commenté dans un Français correct. Pour les noms de fonctions, classes, variables... on suit les conventions de code classic, tout en anglais, ils doivent néanmoins avoir des noms avec un sens précis.
 
 ## Licence
-Ce projet est sous licence CeCILL 2.1 dans le but de garantir le principe du logiciel libre c'est-à-dire le libre accès au code source, la libre utilisation, la libre redistribution et la libre modification. La licence est compatible GNU GPL.
+Ce projet est sous licence CeCILL 2.1.
