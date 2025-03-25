@@ -9,6 +9,7 @@ Année scolaire, 2024-2025.
 ### Initiateurs du projet
 - Noé Poirier
 - Axel Duquesnay
+- Liam Charpentier
 
 ## Professeur
 - Patrice Houssais
