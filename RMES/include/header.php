@@ -1,5 +1,7 @@
 <?php 
-
+require_once realpath("./vendor/autoload.php");
+use Dotenv\Dotenv;$dotenv = Dotenv::createImmutable(".");
+$dotenv->load();
 ?>
 
 <!DOCTYPE html>
@@ -12,9 +14,9 @@
     <header>
       <h1>RMES</h1>
       <ul>
-        <li><a href="./index.php">Accueil</a></li>
-        <li><a href="">Chat global</a></li>
-        <li><a href="">Se connecter</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./chat.php">Chat</a></li>
+        <li><a href="./login.php">Log in</a></li>
         <li>
           <a href="https://github.com/NoePoirier5327/RMES">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
