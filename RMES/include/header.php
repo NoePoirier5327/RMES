@@ -16,7 +16,11 @@ $dotenv->load();
       <ul>
         <li><a href="./index.php">Home</a></li>
         <li><a href="./chat.php">Chat</a></li>
-        <li><a href="./login.php">Log in</a></li>
+        <?php
+        // Si on est connecté, on affiche le nom de l'utilisateur
+        if (isset($_COOKIE["connecter"])) { echo "<li><a href='./login.php'>".json_decode($_COOKIE["token"], true)["identifiant"]."</a></li>"; }
+        else { echo "<li><a href='./login.php'>Log in</a></li>"; }
+        ?>
         <li>
           <a href="https://github.com/NoePoirier5327/RMES">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
