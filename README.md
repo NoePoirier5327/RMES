@@ -6,8 +6,10 @@ Il s'agit d'un projet d'échanges (culturels et éducatifs) entre écoles.
 Année scolaire, 2024-2025.
 
 ## Eleves
+### Initiateurs du projet
 - Noé Poirier
 - Axel Duquesnay
+- Liam Charpentier
 
 ## Professeur
 - Patrice Houssais
