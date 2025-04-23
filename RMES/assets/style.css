@@ -1,7 +1,7 @@
 /* Variables générales - Peuvent êtres modifiés pour changer le style du site */
 
 :root{
-    --background-color: white;
+    --background-color: #ebebeb;
     --text-color: black;
     --font-family: system-ui;
     --accent-color: #30849C;
@@ -86,6 +86,10 @@ header nav ul a:after{
     transition: all .5s;
 }
 
+header nav ul a.disabled{
+    cursor: not-allowed
+}
+
 /* MAIN */
 
 main{
@@ -93,6 +97,11 @@ main{
     flex-direction: column;
     gap: 30px;
     flex: 1;
+}
+
+main .container{
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 /* Mise en avant */
@@ -122,13 +131,11 @@ main .header .description{
 
 main .swiper {
     width: 100%;
-    height: 100%;
-  }
+}
 
 main .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,4 +146,105 @@ main .swiper-slide img {
     width: 100%;
     height: 100%;
     max-width: 200px;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--header-background);
+    color: var(--background-color);
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .swiper{
+    margin: unset;
+}
+
+footer .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+footer .swiper-slide .text p {
+    margin: 0;
+}
+
+footer .swiper-slide .text {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .swiper-slide .text .name {
+    font-weight: bold;
+}
+
+footer .swiper-slide .text .job {
+    color: darkgray;
+}
+
+footer .swiper-slide .text a {
+    color: skyblue
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1100px) {
+
+    header{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header nav{
+        flex-direction: column;
+    }
+
+    main .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    main .header .description{
+        position: relative;
+        bottom: unset;
+        transform: unset;
+        left: unset;
+        background: var(--background-color)
+    }
+
+    footer{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer .copy{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }

@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RMES</title>
-    <link href="./style/style.css" rel="stylesheet" type="text/css"/>
+    <title><?= $CONFIG["name"] ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Dépendances -->
+    <!-- Dépendances (! remove fontawesome btw) -->
 
+    <link href="./assets/style.css" rel="stylesheet" type="text/css"/>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
-    <!-- SEO -->
-
+    <!-- SEO (todo) -->
 
   </head>
   <body>
+    <?php
+    // Vérifier que la config est chargée - pq pas la charger directement ici ?
+    if(!isset($CONFIG)){
+      echo "Le fichier config.php doit être inclus dans votre fichier php.";
+      exit;
+    }
+    ?>
     <header>
-      <h1>RMES</h1>
+      <h1><?= $CONFIG["name"] ?></h1>
       <nav>
         <ul>
-          <li><a href="./index.php">Accueil</a></li>
-          <li><a href="">Chat global</a></li>
-          <li><a href="">Se connecter</a></li>
+          <?php
+          /* Récupérer le menu depuis la config */
+          foreach($CONFIG["menu"] as $menuItem){
+            echo "<li><a ".(array_key_exists("className", $menuItem) ? "class='{$menuItem["className"]}'":  "")." href='{$menuItem["href"]}'>{$menuItem["title"]}</a></li>";
+          }
+          ?>
         </ul>
         <a href="https://github.com/NoePoirier5327/RMES" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
