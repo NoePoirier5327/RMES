@@ -6,7 +6,7 @@ require_once(__DIR__."/include/header.php");
 
 <main>
   <div class="header">
-    <img src="./image/lycee_reaumur.jpg" alt="Image du lycée Réaumur"/>
+    <img src="./image/globe.jpg" alt="Image Globe"/>
 
     <div class="description">
       <h1>Welcome to the global network of solidarity schools</h1>
