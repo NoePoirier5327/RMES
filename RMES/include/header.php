@@ -57,6 +57,7 @@
       exit;
     }
     ?>
+    <p id="warn_construction">Our website is still under construction</p>
     <header>
       <h1><?= $CONFIG["name"] ?></h1>
       <nav>

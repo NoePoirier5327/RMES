@@ -12,8 +12,6 @@
           <div class="swiper-button-prev"></div>
         </div>
       </div>
-
-      <p>Our website is still under construction.</p>
     </footer>
 
     <script src="./assets/script.js"></script>
