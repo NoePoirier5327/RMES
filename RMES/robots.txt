@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://noschool-frontieres.org/sitemap.xml

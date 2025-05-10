@@ -4,24 +4,54 @@
     <title><?= $CONFIG["name"] ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Dépendances (! remove fontawesome btw) -->
+    <!-- Dependencies -->
 
     <link href="./assets/style.css" rel="stylesheet" type="text/css"/>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/winbox@0.2.82/dist/css/winbox.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/winbox@0.2.82/dist/winbox.bundle.min.js"></script>
+  
 
+    <!-- SEO -->
 
-    <!-- SEO (todo) -->
+    <meta name="title" content="School without frontiers">
+    <meta name="description" content="Our aim is to provide a cultural exchange between any school in the world.">
+    <meta name="keywords" content="school, réaumur, reaumur, lycee, lycée, laval, sydney, nepal, world, frontiers, world, school without frontiers, ">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name='url' content='https://noschool-frontieres.org'>
+
+    <meta name='og:title' content='School without frontiers'>
+    <meta name='og:type' content='website'>
+    <meta name='og:url' content='https://noschool-frontieres.org'>
+    <meta name='og:site_name' content='School without frontiers'>
+    <meta name='og:description' content="Our aim is to provide a cultural exchange between any school in the world.">
+
+    <link rel="canonial" href="https://noschool-frontieres.org">
 
   </head>
   <body>
+
+  <!-- Analytics (todo: cookies) -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="https://analytics.liamcharpentier.fr/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+
+
     <?php
-    // Vérifier que la config est chargée - pq pas la charger directement ici ?
+    // Vérifier que la config est chargée
     if(!isset($CONFIG)){
       echo "Le fichier config.php doit être inclus dans votre fichier php.";
       exit;
@@ -46,4 +76,3 @@
       </nav>
       
     </header>
-

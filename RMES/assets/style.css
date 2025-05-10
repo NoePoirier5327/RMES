@@ -139,6 +139,7 @@ main .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 main .swiper-slide img {
@@ -148,6 +149,37 @@ main .swiper-slide img {
     max-width: 200px;
 }
 
+main .slider-ecoles .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 250px;
+}
+
+main .slider-ecoles .swiper-slide .map{
+    padding: .7rem;
+    background: #333;
+    color: white;
+    border: 0;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+main .slider-ecoles .swiper-slide .map:hover{
+    background: #555;
+}
+
+.winbox {
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.winbox.min {
+    border-radius: 0;
+}
+
 /* FOOTER */
 
 footer{
@@ -155,6 +187,12 @@ footer{
     padding: 10px;
     background-color: var(--header-background);
     color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .foo-top{
     display: flex;
     justify-content: space-around;
 }
@@ -234,7 +272,7 @@ footer .swiper-slide .text a {
         background: var(--background-color)
     }
 
-    footer{
+    footer .foo-top{
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
