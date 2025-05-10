@@ -180,6 +180,11 @@ main .slider-ecoles .swiper-slide .map:hover{
     border-radius: 0;
 }
 
+.school_logo {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 /* FOOTER */
 
 footer{

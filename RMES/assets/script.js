@@ -1,8 +1,8 @@
-/* Présentation visuelle dans la console. Utilisé : 0 mais c'est stylé :) */
+/* Présentation visuelle dans la console. Utilité : 0 mais c'est stylé :) */
 
 function init() {
   console.log(
-    "%cRMES - Profs sans frontières",
+    "%cRMES - School without frontieres",
     "font-size: 50px; font-weight: bold; color: red; text-shadow: 2px 2px 4px black;text-align: center;"
   );
   console.log(
@@ -31,6 +31,7 @@ fetch("api/schools").then(res => res.json()).then(res => {
       slide.className = "swiper-slide";
 
       let link = document.createElement("a");
+      link.classList.add("school_logo");
       link.href = school.website;
       link.target = "_blank";
 
