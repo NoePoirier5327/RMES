@@ -5,11 +5,12 @@ $CONFIG = array(
     "menu" => [
         [
             "title" => "Home",
-            "href" => "./index.php"
+            "href" => "/"
         ],
         [
             "title" => "Global chat",
-            "href" => "./index.php"
+            "href" => null,
+            "className" => "disabled"
         ],
         [
             "title" => "News",
@@ -21,19 +22,19 @@ $CONFIG = array(
     "developers" => [
         [
             "name" => "Liam CHARPENTIER",
-            "picture" => "https://placehold.co/200x250?text=Aucune%20%5Cnimage%20%5Cndisponible",
+            "picture" => null,
             "job" => "Designer",
             "website" => "https://liamcharpentier.fr/?mtm_campaign=rmes"
         ],
         [
             "name" => "Noé POIRIER",
-            "picture" => "https://placehold.co/200x250?text=Aucune%20%5Cnimage%20%5Cndisponible",
+            "picture" => null,
             "job" => "Back-end developer",
             "website" => "https://github.com/NoePoirier5327"
         ],
         [
             "name" => "Axel DUQUESNAY",
-            "picture" => "https://placehold.co/200x250?text=Aucune%20%5Cnimage%20%5Cndisponible",
+            "picture" => null,
             "job" => "Discord",
             "website" => "https://github.com/DaWae-prog"
         ]

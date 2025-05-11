@@ -22,7 +22,7 @@ init();
 
 /* Load schools */
 
-fetch("api/schools").then(res => res.json()).then(res => {
+fetch("api/config/schools").then(res => res.json()).then(res => {
   if(res.status == 200){
     let wrapper = document.querySelector(".slider-ecoles .swiper-wrapper");
 
@@ -89,7 +89,7 @@ fetch("api/schools").then(res => res.json()).then(res => {
 
 /* Load developers */
 
-fetch("api/developers").then(res => res.json()).then(res => {
+fetch("api/config/developers").then(res => res.json()).then(res => {
   if(res.status == 200){
     let wrapper = document.querySelector(".slider-devs .swiper-wrapper")
     res.data.forEach(developer => {
@@ -97,7 +97,7 @@ fetch("api/developers").then(res => res.json()).then(res => {
       slide.className = "swiper-slide";
 
       let image = document.createElement("img");
-      image.src = developer.picture;
+      image.src = developer.picture ? developer.picture : "https://placehold.co/200x250?text=No%20%5Cnpicture%20%5Cnavailable";
       image.alt = developer.name;
       image.className = "avatar"
 
