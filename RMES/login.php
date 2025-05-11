@@ -1,5 +1,6 @@
 <?php 
-require_once("./include/header.php");
+require_once(__DIR__."/config.php");
+require_once(__DIR__."/include/header.php");
 $success = true;
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
@@ -46,7 +47,7 @@ function connexion()
     { 
       setcookie("token", json_encode(["id" => $reponse["id"], "identifiant" => $_POST["identifiant"]]), time() + 1200);
       setcookie("connecter", true, time() + 1200);
-      echo "<a href='./chat.php'>Start talking</a>"; 
+      echo "<a href='./admin.php'>Go to admin page</a>"; 
     }
     else { echo "<p class='red'>".$reponse["error"]."</p>"; }
   }
@@ -57,7 +58,7 @@ function deja_connecter()
   echo "<main>";
     echo "<img src='./image/checked.webp' alt='You are logged'/>";
     echo "<h1>You are already logged in</h1>";
-    echo "<a href='./chat.php'>Start talking</a>";
+    echo "<a href='./admin.php'>Go to admin page</a>";
   echo "</main>";
 }
 

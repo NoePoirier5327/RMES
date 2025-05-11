@@ -1,4 +1,5 @@
-<?php 
+<?php
+// Accès à l'environnement de travail
 require_once realpath("./vendor/autoload.php");
 use Dotenv\Dotenv;$dotenv = Dotenv::createImmutable(".");
 $dotenv->load();
