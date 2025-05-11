@@ -2,7 +2,7 @@
 ini_set("display_errors", 1);
 require_once(__DIR__."/config.php");
 require_once(__DIR__."/include/header.php");
-require_once(__DIR__."/api/bdd.php");
+include(__DIR__."/api/bdd.php");
 
 // Fonction affichant la page d'admin
 function display_admin()
@@ -30,19 +30,17 @@ function display_admin()
       $articles = $bdd->get("article");
       foreach ($articles as $article)
       {
-        echo "<tr>";
+        echo "<tr id='article_".$article["id_article"]."'>";
           echo "<th>".$article["title"]."</th>";
           echo "<th>".$article["date_insert"]."</th>";
           echo "<th>".$article["date_modif"]."</th>";
-
-          // TO DO : ajouter la couleur verte et rouge du bouton
-          echo "<th><input type='button' class='".($article["actif"] == 1 ? "green_btn" : "red_btn")."' onclick='set_actif(".$article["id_article"].")' action='submit' value=''/></th>";
+          echo "<th><input id='actif_".$article["id_article"]."' type='button' class='".($article["actif"] == 1 ? "green_btn" : "red_btn")."' onclick='set_actif(".$article["id_article"].")' action='submit' value=''/></th>";
 
           // TO DO : ajouter la fonctionnalité de modification d'un article
           echo "<th></th>";
 
           // TO DO : ajouter l'image ./image/trash_can.png comme assets du bouton
-          echo "<th><input type='button' class='delete_btn' onclick='".$article["id_article"]."' action='submit' value=''/></th>";
+          echo "<th><input type='button' class='delete_btn' onclick='delete_article(".$article["id_article"].")' action='submit' value=''/></th>";
         echo "</tr>";
       }
     echo "</tbody>";
@@ -55,6 +53,8 @@ function go_to_log_in()
   echo "<p>You need to <a href='./login.php'>log in</a> before accessing this page</p>";
 }
 ?>
+
+<script src="./api/button_action.js"> </script>
 
 <main>
 <?php
