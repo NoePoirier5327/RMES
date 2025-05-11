@@ -3,7 +3,14 @@
         <div class="copy">
           <h2><?= $CONFIG["name"] ?></h2>
 
-          <img src="./image/logos/reaumur.png" alt="Lycée Réaumur">
+          <ul class="socials">
+            <li>
+                <a href="mailto:contact@noschool-frontiers.org">
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@noschool-frontiers.org
+                </a>
+            </li>
+          </ul>
         </div>
 
         <div class="swiper slider-devs">
