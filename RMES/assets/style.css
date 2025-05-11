@@ -1,0 +1,298 @@
+#warn_construction {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Variables générales - Peuvent êtres modifiés pour changer le style du site */
+
+:root{
+    --background-color: #ebebeb;
+    --text-color: black;
+    --font-family: system-ui;
+    --accent-color: #30849C;
+    --header-background: black;
+}
+
+/* HTML et BODY */
+
+html, body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-background);
+    color: var(--background-color);
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* Menu de navigation */
+
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav svg{
+    fill: white;
+    width: 32px;
+    height: 32px;
+    transition: all .5s;
+}
+
+header nav svg:hover{
+    fill: rgba(255, 255, 255, 0.7)
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header nav ul a{
+    color: var(--accent-color);
+    font-weight: bold;
+    text-decoration: none;
+    position: relative
+}
+
+header nav ul a:hover:after{
+    width: 100%
+}
+
+header nav ul a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: all .5s;
+}
+
+header nav ul a.disabled{
+    cursor: not-allowed
+}
+
+/* MAIN */
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+
+main .container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Mise en avant */
+
+main .header{
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+main .header img{
+    width: 100%;
+}
+
+main .header .description{
+    position:absolute;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Slider (partenaires & collaborateurs) */
+
+main .swiper {
+    width: 100%;
+}
+
+main .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+}
+
+main .slider-ecoles .swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 250px;
+}
+
+main .slider-ecoles .swiper-slide .map{
+    padding: .7rem;
+    background: #333;
+    color: white;
+    border: 0;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+main .slider-ecoles .swiper-slide .map:hover{
+    background: #555;
+}
+
+.winbox {
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.winbox.min {
+    border-radius: 0;
+}
+
+.school_logo {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--header-background);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .foo-top{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .swiper{
+    margin: unset;
+}
+
+footer .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+footer .swiper-slide .text p {
+    margin: 0;
+}
+
+footer .swiper-slide .text {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .swiper-slide .text .name {
+    font-weight: bold;
+}
+
+footer .swiper-slide .text .job {
+    color: darkgray;
+}
+
+footer .swiper-slide .text a {
+    color: skyblue
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1100px) {
+
+    header{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header nav{
+        flex-direction: column;
+    }
+
+    main .header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    main .header .description{
+        position: relative;
+        bottom: unset;
+        transform: unset;
+        left: unset;
+        background: var(--background-color)
+    }
+
+    footer .foo-top{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer .copy{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
