@@ -20,6 +20,7 @@ function display_admin()
         echo "<th>Title</th>";
         echo "<th>Insertion date</th>";
         echo "<th>Modification date</th>";
+        echo "<th>Journalist</th>";
         echo "<th>Actif</th>";
         echo "<th>Modify</th>";
         echo "<th>Delete</th>";
@@ -34,6 +35,7 @@ function display_admin()
           echo "<th>".$article["title"]."</th>";
           echo "<th>".$article["date_insert"]."</th>";
           echo "<th>".$article["date_modif"]."</th>";
+          echo "<th>".$article["writer"]."</th>";
           echo "<th><input id='actif_".$article["id_article"]."' type='button' class='".($article["actif"] == 1 ? "green_btn" : "red_btn")."' onclick='set_actif(".$article["id_article"].")' action='submit' value=''/></th>";
 
           // TO DO : ajouter la fonctionnalité de modification d'un article

@@ -1,3 +1,9 @@
 RewriteEngine On
 
+RewriteRule api/login ./api/connexion.php
+RewriteRule api/channel ./api/canaux.php 
+RewriteRule api/logout ./api/deconnexion.php
+RewriteRule api/modify ./api/article_modify.php
+RewriteRule api/delete ./api/article_delete.php
+RewriteRule api/post ./api/add_article.php
 RewriteRule api/config/(.*)$ ConfigApiManager.php?path=$1

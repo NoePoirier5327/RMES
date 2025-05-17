@@ -5,7 +5,7 @@ function set_actif(id)
   if (btn_article.className === "red_btn")
   {
     btn_article.className = "green_btn";
-    fetch("api/actif?id_article=" + id.toString() + "&green=1")
+    fetch("api/modify?id_article=" + id.toString() + "&green=1")
       .then(res => res.json())
       .then(res => { console.log(res); })
       .catch(error => { console.error("Error: ", error); });
@@ -13,7 +13,7 @@ function set_actif(id)
   else
   {
     btn_article.className = "red_btn";
-    fetch("api/actif?id_article=" + id.toString() + "&green=0")
+    fetch("api/modify?id_article=" + id.toString() + "&green=0")
       .then(res => res.json())
       .then(res => { console.log(res); })
       .catch(error => { console.error("Error: ", error); });
